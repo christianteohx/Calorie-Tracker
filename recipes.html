@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="recipeRecommendation.css">
+</head>
+<body>
+    <header>
+        <button id="navToggle">Menu</button>
+        <nav id="verticalNavbar">
+        <a href="daily.html">Goals Tracker</a>
+        <a href="calorie-tracker.html">Calorie Tracker</a>
+        <a href="static/ai_chat.html">AI Chat</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        </nav>
+    </header>
+    
+    <script>
+        function changeProperty(newID){
+            const target = document.getElementsByClassName("recipeItem");
+            target[0].id = newID;
+        }
+        
+        window.addEventListener("message", function(event){
+            const receivedMessage = event.data;
+            console.log(event)
+            if (receivedMessage.id) {
+                const recipeId = receivedMessage.id;
+                console.log("Received Recipe ID:", recipeId);
+            }
+
+            //console.log(event.data)
+            //console.log(event.data.data.id)
+            //changeProperty(event.data["id"]);
+            console.log("HJHGHJHBHJ")
+            
+        });
+    </script>
+
+
+    <div class="recipeDetails">
+        <h1 class="recipeTitle"></h1>
+        <img class="recipeImage" src="" alt="Recipe Image">
+        <div class="recipeInstructions"></div>
+    </div>
+</body>
+<script src="recipeRecommendation.js"></script>
+</html>

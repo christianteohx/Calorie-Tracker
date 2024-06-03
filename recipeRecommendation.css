@@ -1,0 +1,271 @@
+body {
+    background-color: #f0f0f0b3; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #000000; 
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+#verticalNavbar {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#verticalNavbar a {
+    display: block;
+    text-decoration: none;
+    color: gray;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+#verticalNavbar a:hover {
+    color: white;
+}
+
+#verticalNavbar a.highlight-link {
+    color: white;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #f0f0f0b3; 
+    padding: 20px;
+    background-color: #D9D9D9; 
+    height: 50px;
+    border: 1px solid #000; 
+}
+
+.menu{
+    background-color: #ffffff; 
+    font-family: Arial, sans-serif;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.recipeBox {
+    background-color: #D9D9D9; 
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.recipeItem {
+    background-color: #f0f0f0; 
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #000; 
+    width: 175px;
+    box-sizing: border-box;
+    height: 175px;
+}
+
+
+h3{
+    color: #ffffff;
+    margin: 0;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+h1{
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    min-height: 35px;
+    line-height: 35px;
+}
+
+h2{
+    color: #000;
+    margin: 0;
+}
+
+.calories {
+    opacity: 10%;
+}
+
+.calories:hover{
+    opacity: 100%;
+    color: #0000008d;
+}
+
+a {
+    color: #000;
+}
+#controlsWrapper {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 20px 0;
+}
+
+#sortingDropdown,
+#searchBar {
+    flex: 1; 
+    text-align: center;
+}
+
+#sortingDropdown select,
+#searchBar input[type="text"] {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+#sortingDropdown select:hover,
+#searchBar input[type="text"]:hover {
+    border-color: #888;
+}
+
+@media (max-width: 768px) {
+    #controlsWrapper {
+        flex-direction: column;
+    }
+    
+    #sortingDropdown,
+    #searchBar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        font-size: 14px; 
+    }
+
+    #verticalNavbar {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #verticalNavbar a {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .menu {
+        padding: 0; 
+    }
+
+    .recipeBox {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .recipeItem {
+        width: 70px; 
+        margin: 10px; 
+        padding: 10px;
+        font-size: 14px; 
+    }
+
+    .recipeItem h2 {
+        font-size: 22px; 
+    }
+
+  
+}
+
+
+#AddRecipe {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+#recipeForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+#recipeForm input, #recipeForm textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.recipeItem {
+    background-color: #f0f0f0; 
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #000000;
+    width: 175px;
+    box-sizing: border-box;
+    height: 175px;
+    border-radius: 25px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.recipeItem h2, .recipeItem p {
+    margin: 5px 0; 
+}
+
+.scrollable-content {
+    max-height: 50px;
+    overflow-y: auto;
+    margin: 0 10px; 
+    padding-right: 3px;
+    word-wrap: break-word;
+}
+
+
+.deleteButton {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 9999;
+}

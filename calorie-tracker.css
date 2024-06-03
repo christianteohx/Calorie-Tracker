@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #D9D9D9;
+}
+
+header {
+    background-color: #000000; 
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+#verticalNavbar {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#verticalNavbar a {
+    display: block;
+    text-decoration: none;
+    color: gray;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+#verticalNavbar a:hover {
+    color: white;
+}
+
+#verticalNavbar a.highlight-link {
+    color: white;
+    font-size: 20px;
+}
+
+.main-container {
+    height: 100px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    background-color: #D9D9D9;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #020202;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.nutrient-box {
+    width: 50%;
+    height: 20%;
+    background-color: #D9D9D9;
+    border-radius: 10%; 
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 150%;
+    text-align: center;
+    border: solid 5px #d7d6d6;
+}
+
+.total-calorie-section {
+    padding: 0;
+}
+
+.total-calorie-box {
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 150%; */
+    padding: 10px;
+}
+
+#total-calorie-label {
+    height: fit-content;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#total-calorie-entry {
+    width: 50%;
+    border-radius: 10%; 
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20%;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px #888888;
+    display: flex;
+    flex-direction: column;
+}
+
+#totalCalorieText {
+    font-size: 25px;
+}
+
+#changeCalorieLabel {
+    font-size: 10px;
+}
+
+#total-calorie-entry:hover {
+    background-color: #e0e0e0;
+}
+
+#circle {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    border: double 1em transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#e4e4e4, #e4e4e4), 
+                        linear-gradient(180deg, #e4e4e4 75%, black 50%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-bottom: 100px;
+}
+
+.percentage {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+#total-calorie-left {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.meal-box {
+    width: 50%;
+    height: 20%;
+    background-color: #f0f0f0;
+    border-radius: 10%;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 150%;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px #888888;
+}
+
+.meal-box:hover {
+    background-color: #e0e0e0;
+}
+
+.close-button {
+    cursor: pointer;
+}
+
+footer {
+    background-color: #D9D9D9;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 5;
+}
+
+.popup-content {
+    background: white;
+    width: 100%;
+    max-width: 500px; 
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button {
+    margin: 20px;
+    align-self: flex-start;
+}
+
+#searchInput {
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#searchResults {
+    margin: 20px;
+    padding: 10px;
+    width: 95%;
+}
+
+.resultItem {
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.amount-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 6;
+}
+
+#submitAmount {
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+    header{
+
+        width: 100vw;
+    }
+
+    .main-container{
+        width: 100%;
+    }
+
+    .box {
+        width: 30%;
+    }
+
+    .nutrient-box {
+        width: 100%;
+    }
+
+    .meal-box {
+        width: 100%;
+    }
+
+    .total-calorie-box {
+        width: 100%;
+    }
+
+    #total-calorie-label {
+        font-size: 100%;
+    }
+
+    #total-calorie-entry {
+        font-size: 100%;
+        overflow: hidden; 
+    }
+
+    #totalCalorieText {
+        font-size: 100%;
+    }
+
+    #circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .percentage {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    #verticalNavbar {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #verticalNavbar a {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+}
