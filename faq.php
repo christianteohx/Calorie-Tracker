@@ -1,8 +1,8 @@
 <?php
-      $host = "oceanus.cse.buffalo.edu"; //hostname
-      $username =  'tylerkre'; //databse username
-      $password =  '50352047'; //database password
-      $database = 'cse442_2023_fall_team_z_db'; //database name
+      $host = getenv('DB_HOST') ?: 'localhost';
+      $username = getenv('DB_USER') ?: 'root';
+      $password = getenv('DB_PASS') ?: '';
+      $database = getenv('DB_NAME') ?: 'cse442_2023_fall_team_z_db';
   
       $conn = mysqli_connect($host, $username, $password, $database);
   
