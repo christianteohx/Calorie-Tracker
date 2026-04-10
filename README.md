@@ -36,3 +36,15 @@ php -S localhost:8000
 ## Security
 
 Database credentials are managed via environment variables. See `.env.example` for required variables.
+
+## Secret scanning
+
+This repo uses **gitleaks**:
+- CI scan on every push/PR via `.github/workflows/gitleaks.yml`
+- Optional local pre-commit hook in `.githooks/pre-commit`
+
+Enable local hook once:
+
+```bash
+./scripts/setup-githooks.sh
+```
